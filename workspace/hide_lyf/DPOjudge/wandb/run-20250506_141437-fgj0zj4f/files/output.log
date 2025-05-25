@@ -1,2 +1,0 @@
- 36%|█████████████████████████████████▋                                                            | 995/2780 [2:27:32<4:31:25,  9.12s/it]
-{'loss': 0.0876, 'grad_norm': 0.041259765625, 'learning_rate': 1.6410071942446043e-05, 'rewards/chosen': -0.9905828237533569, 'rewards/rejected': -29.436857223510742, 'rewards/accuracies': 0.9222332835197449, 'rewards/margins': 28.446273803710938, 'logps/chosen': -114.63481140136719, 'logps/rejected': -575.6355590820312, 'logits/chosen': nan, 'logits/rejected': nan, 'epoch': 3.59}

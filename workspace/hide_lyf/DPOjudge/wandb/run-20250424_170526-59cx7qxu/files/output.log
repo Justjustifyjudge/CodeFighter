@@ -1,4 +1,0 @@
-100%|██████████████████████████████████████████████████████████████████████████████████████████| 105/105 [24:17<00:00, 13.88s/it]
-{'train_runtime': 1463.8484, 'train_samples_per_second': 0.572, 'train_steps_per_second': 0.072, 'train_loss': 0.09943867637997582, 'epoch': 3.0}
-
-Training completed and model saved.
