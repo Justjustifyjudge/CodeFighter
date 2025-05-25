@@ -1,0 +1,15 @@
+{"time":"2025-05-07T10:18:23.234179042+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/workspace/hide_lyf/DPOjudge/wandb/run-20250507_101823-zsigr679/logs/debug-core.log"}
+{"time":"2025-05-07T10:18:24.046745476+08:00","level":"INFO","msg":"created new stream","id":"zsigr679"}
+{"time":"2025-05-07T10:18:24.04697533+08:00","level":"INFO","msg":"stream: started","id":"zsigr679"}
+{"time":"2025-05-07T10:18:24.047052278+08:00","level":"INFO","msg":"handler: started","stream_id":"zsigr679"}
+{"time":"2025-05-07T10:18:24.047183249+08:00","level":"INFO","msg":"sender: started","stream_id":"zsigr679"}
+{"time":"2025-05-07T10:18:24.047265407+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"zsigr679"}
+{"time":"2025-05-07T10:18:24.468275532+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-07T10:18:25.085309067+08:00","level":"INFO","msg":"stream: closing","id":"zsigr679"}
+{"time":"2025-05-07T10:18:25.085372841+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-07T10:18:25.085532156+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-07T10:18:31.540848484+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-07T10:18:32.048022956+08:00","level":"INFO","msg":"handler: closed","stream_id":"zsigr679"}
+{"time":"2025-05-07T10:18:32.048157163+08:00","level":"INFO","msg":"sender: closed","stream_id":"zsigr679"}
+{"time":"2025-05-07T10:18:32.04814665+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"zsigr679"}
+{"time":"2025-05-07T10:18:32.048386876+08:00","level":"INFO","msg":"stream: closed","id":"zsigr679"}

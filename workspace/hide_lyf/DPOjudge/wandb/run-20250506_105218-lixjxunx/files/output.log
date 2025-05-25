@@ -1,0 +1,10 @@
+Loading test data...
+Loaded 278 test samples
+Loading trained model...
+Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████████████████| 7/7 [00:12<00:00,  1.82s/it]
+Starting evaluation...
+Evaluating: 100%|███████████████████████████████████████████████████████████████████████████████████| 70/70 [00:57<00:00,  1.21it/s]
+
+Test Accuracy: 0.2714
+Average Preference Margin: -4711.4972
+Evaluation completed. Results saved to test_results.json

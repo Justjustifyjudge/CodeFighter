@@ -1,0 +1,13 @@
+{
+  "accuracy": 0.6539792387543253,
+  "preference_margin": 919.4652315027573,
+  "total_samples": 289,
+  "detailed_results": [
+    {
+      "prompt": "你有两个 有序 且数组内元素互不相同的数组 nums1 和 nums2 。\n一条 合法路径 定义如下：\n\n选择数组 nums1 或者 nums2 开始遍历（从下标 0 处开始）。\n从左到右遍历当前数组。\n如果你遇到了 nums1 和 nums2 中都存在的值，那么你可以切换路径到另一个数组对应数字处继续遍历（但在合法路径中重复数字只会被统计一次）。\n\n得分 定义为合法路径中不同数字的和。\n请你返回 所有可能 合法路径 中的最大得分。由于答案可能很大，请你将它对 10^9 + 7 取余后返回。\n \n示例 1：\n\n\n输入：nums1 = [2,4,5,8,10], nums2 = [4,6,8,9]\n输出：30\n解释：合法路径包括：\n[2,4,5,8,10], [2,4,5,8,9], [2,4,6,8,9], [2,4,6,8,10],（从 nums1 开始遍历）\n[4,6,8,9], [4,5,8,10], [4,5,8,9], [4,6,8,10]  （从 nums2 开始遍历）\n最大得分为上图中的绿色路径 [2,4,6,8,10] 。\n\n示例 2：\n\n输入：nums1 = [1,3,5,7,9], nums2 = [3,5,100]\n输出：109\n解释：最大得分由路径 [1,3,5,100] 得到。\n\n示例 3：\n\n输入：nums1 = [1,2,3,4,5], nums2 = [6,7,8,9,10]\n输出：40\n解释：nums1 和 nums2 之间无相同数字。\n最大得分由路径[6,7,8,9,10]得到。\n\n \n提示：\n\n1 <= nums1.length, nums2.length <= 105\n1 <= nums1[i], nums2[i] <= 107\nnums1 和 nums2 都是严格递增的数组。\n\n",
+      "chosen": "const int MOD = 1000000007;\n\nlong long max(long long a, long long b) {\n    return a > b ? a : b;\n}\n\nint maxSum(int* nums1, int nums1Size, int* nums2, int nums2Size) {\n    long long best1 = 0, best2 = 0;\n    int i = 0, j = 0;\n    while (i < nums1Size || j < nums2Size) {\n        if (i < nums1Size && j < nums2Size) {\n            if (nums1[i] < nums2[j]) {\n                best1 += nums1[i];\n                ++i;\n            } else if (nums1[i] > nums2[j]) {\n                best2 += nums2[j];\n                ++j;\n            } else {\n                long long best = fmax(best1, best2) + nums1[i];\n                best1 = best2 = best;\n                ++i;\n                ++j;\n            }\n        } else if (i < nums1Size) {\n            best1 += nums1[i];\n            ++i;\n        } else if (j < nums2Size) {\n            best2 += nums2[j];\n            ++j;\n        }\n    }\n    return max(best1, best2) % MOD;\n}",
+      "rejected": "class Solution:\n    def maxSum(self, nums1: List[int], nums2: List[int]) -> int:\n        MOD = 10**9 + 7\n        i = j = 0\n        sum1 = sum2 = 0\n        while i < len(nums1) and j < len(nums2):\n            if nums1[i] < nums2[j]:\n                sum1 += nums1[i]\n                elif nums1[i] > nums2[j]:\n                    sum2 += nums2[j]\n            else:\n                sum1 = sum2 = max(sum1, sum2) + nums1[i]\n                i += 1\n                j += 1\n        while i < len(nums1):\n            sum1 += nums1[i]\n            i += 1\n        while j < len(nums2):\n            sum2 += nums2[j]\n            j += 1\n        return max(sum1, sum2) % MOD",
+      "chosen_logp": -19225.2890625,
+      "rejected_logp": -22585.173828125,
+      "margin": 3359.884765625,
+      "correct": 
