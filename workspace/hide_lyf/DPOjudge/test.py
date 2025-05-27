@@ -10,12 +10,12 @@ import wandb  # 可选，如果需要记录到WandB
 # 配置参数
 # ----------------------
 # TEST_DATA_PATH = "test.json"
-TRAINING_DATA_PATH_1 = "training_data_AT.json"
-TRAINING_DATA_PATH_2 = "training_data_epoch3.json"
-TRAINING_DATA_PATH_3 = "training_data_epoch10.json"
-TRAINING_DATA_PATH_4 = "training_data_original_7B.json"
-TEST_DATA_PATH=[TRAINING_DATA_PATH_1,TRAINING_DATA_PATH_2,TRAINING_DATA_PATH_3,TRAINING_DATA_PATH_4]
-# TEST_DATA_PATH = "training_data_epoch3.json"
+TEST_DATA_PATH_1 = "test_data_AT.json"
+TEST_DATA_PATH_2 = "test_data_epoch3.json"
+TEST_DATA_PATH_3 = "test_data_epoch10.json"
+TEST_DATA_PATH_4 = "test_data_original_7B.json"
+TEST_DATA_PATH=[TEST_DATA_PATH_1,TEST_DATA_PATH_2,TEST_DATA_PATH_3,TEST_DATA_PATH_4]
+# TEST_DATA_PATH = "test_data_epoch3.json"
 
 # MODEL_PATH = "dpo_scoring_model"  # 训练保存的模型路径
 MODEL_PATH = "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct"  # 训练保存的模型路径
@@ -46,7 +46,7 @@ def load_datas(data_paths):
             print(f"错误：无法解析 {data_path} 为有效的 JSON。")
     return Dataset.from_list(all_data)
 
-test_dataset = load_data(TRAINING_DATA_PATH_1)
+test_dataset = load_data(TEST_DATA_PATH)
 print(f"Loaded {len(test_dataset)} test samples")
 
 # ----------------------
